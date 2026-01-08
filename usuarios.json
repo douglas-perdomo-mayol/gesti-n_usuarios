@@ -1,0 +1,82 @@
+[
+    {
+        "nombre": "Luis",
+        "edad": 30,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Juan",
+        "edad": 18,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Fabio",
+        "edad": 28,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Marcos",
+        "edad": 20,
+        "tipo": "Administrador"
+    },
+    {
+        "nombre": "Carlos",
+        "edad": 30,
+        "tipo": "Administrador"
+    },
+    {
+        "nombre": "Fabio",
+        "edad": 20,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Douglas",
+        "edad": 30,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Luis",
+        "edad": 29,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Hepto",
+        "edad": 20,
+        "tipo": "Administrador"
+    },
+    {
+        "nombre": "Mario",
+        "edad": 30,
+        "tipo": "Administrador"
+    },
+    {
+        "nombre": "Lucas",
+        "edad": 25,
+        "tipo": "Administrador"
+    },
+    {
+        "nombre": "Juan",
+        "edad": 20,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Mario",
+        "edad": 30,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Hepto",
+        "edad": 25,
+        "tipo": "Usuario"
+    },
+    {
+        "nombre": "Fabio",
+        "edad": 19,
+        "tipo": "Administrador"
+    },
+    {
+        "nombre": "Douglas",
+        "edad": 27,
+        "tipo": "Administrador"
+    }
+]

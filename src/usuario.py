@@ -21,5 +21,20 @@ class Usuario:
     def es_mayor_de_edad(self) -> bool:
         return self.__edad >= 21
     
+    def tipo(self):
+        return 'Usuario'
+    
     def __str__(self):
-        return f'{self.__nombre} ({self.__edad})'
+        return f'{self.tipo()}: {self.__nombre} ({self.__edad})'
+    
+class UsuarioAdmin(Usuario):
+    def __init__(self, nombre: str, edad: int, nivel: int):
+        self._nivel = nivel
+        super().__init__(nombre, edad)
+
+    def tipo(self):
+        return 'Administrador'
+    
+    def es_mayor_de_edad(self):
+        return True #Polimorfismo: redefine comportamiento
+    
