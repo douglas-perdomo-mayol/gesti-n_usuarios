@@ -1,32 +1,32 @@
 from gestor import GestorUsuario
 
-def mostrar_menu():
-    print('\n--- Menú ---')
-    print('1. Registrar usuario')
-    print('2. Registrar administrador')
-    print('3. Mostrar mayores de edad')
-    print('4. Salir')
-
 def main():
-    gestor = GestorUsuario()
+    gestor = GestorUsuario() 
 
     while True:
-        mostrar_menu()    
+        print('\n--- Menú ---')
+        print('1. Registrar usuario')
+        print('2. Registrar administrador')
+        print('3. Mostrar mayores de edad')
+        print('4. Salir')  
         opcion = input('Seleccione una opción: ')
 
         if opcion == '1':
-            nombre = input('Nombre: ')
-            edad = int(input('Edad: '))
-            gestor.registrar_usuario(nombre, edad)
+            gestor.registrar_usuario(
+                nombre = input('Nombre: '),
+                edad = int(input('Edad: '))
+            )
 
         elif opcion == '2':
-            nombre = input('Nombre admin: ')
-            edad = int(input('Edad: '))
-            gestor.registrar_usuario(nombre, edad, admin=True, nivel=1)
-
+            gestor.registrar_usuario(
+                nombre = input('Nombre admin: '),
+                edad = int(input('Edad: ')),
+                admin=True
+            )
+            
         elif opcion == '3':
-            for usuario in gestor.obtener_mayores():
-                print(usuario)
+            for u in gestor.obtener_mayores():
+                print(u)
 
         elif opcion == '4':
             print('Saliendo...')
