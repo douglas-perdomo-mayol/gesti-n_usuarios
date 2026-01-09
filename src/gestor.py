@@ -11,3 +11,9 @@ class GestorUsuario:
     
     def obtener_mayores(self):
         return self.db.obtener_mayores()
+    
+    def actualizar_usuario(self, nombre, nuevo_nombre, nueva_edad):
+        self.db.actualizar_edad(nombre, nuevo_nombre, nueva_edad)
+
+    def eliminar_usuario(self, nombre):
+        self.db.eliminar_usuario(nombre)
