@@ -1,5 +1,6 @@
 class Usuario:
-    def __init__(self, nombre: str, edad: int):
+    def __init__(self, id, nombre, edad):
+        self.id = id
         self.__nombre = nombre
         self.__edad = edad
         self.__validar()
@@ -28,9 +29,9 @@ class Usuario:
         return f'{self.tipo()}: {self.__nombre} ({self.__edad})'
     
 class UsuarioAdmin(Usuario):
-    def __init__(self, nombre: str, edad: int, nivel: int):
+    def __init__(self, id, nombre, edad, nivel):
         self._nivel = nivel
-        super().__init__(nombre, edad)
+        super().__init__(id, nombre, edad)
 
     def tipo(self):
         return 'Administrador'

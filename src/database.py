@@ -21,14 +21,15 @@ class DataBase:
         cursor = self.conn.cursor()
         cursor.execute(
             'INSERT INTO usuarios (nombre, edad, tipo) VALUES (?, ?, ?)',
-            (nombre, edad, tipo)
+            (nombre, edad, tipo) 
         )
         self.conn.commit()
+        return cursor.lastrowid
 
     def obtener_mayores(self):
         cursor = self.conn.cursor()
         cursor.execute(
-            'SELECT nombre, edad, tipo FROM usuarios WHERE edad >= 21'
+            'SELECT id, nombre, edad, tipo FROM usuarios WHERE edad >= 21'
         )
         return cursor.fetchall()
 
@@ -38,9 +39,8 @@ class DataBase:
             "UPDATE usuarios SET nombre = ?, edad = ? WHERE nombre = ?",
             (nuevo_nombre, nueva_edad, nombre)
         )
-        if cursor.rowcount == 0:
-            raise ValueError("Usuario no encontrado")
         self.conn.commit()
+        return cursor.rowcount > 0
 
 
     def eliminar_usuario(self, nombre):
@@ -50,3 +50,4 @@ class DataBase:
             (nombre,)
         )
         self.conn.commit()
+        return cursor.rowcount > 0

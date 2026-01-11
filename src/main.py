@@ -18,6 +18,7 @@ def main():
                 nombre = input('Nombre: '),
                 edad = int(input('Edad: '))
             )
+            print('Usuario registrado correctamente.')
 
         elif opcion == '2':
             gestor.registrar_usuario(
@@ -25,22 +26,26 @@ def main():
                 edad = int(input('Edad: ')),
                 admin=True
             )
-            
+            print('Usuario Admin registrado correctamente.')
         elif opcion == '3':
-            for u in gestor.obtener_mayores():
-                print(u)
-        
+            registrado = gestor.obtener_mayores()
+
+            if not registrado:
+                print('No hay usuarios registros...')
+            else:
+                for u in registrado:
+                    print(u)
+            
         elif opcion == '4':
             nombre = input('Nombre del usuario: ')
-            nuevo_nombre = input('Nuevo nombrebre: ')
+            nuevo_nombre = input('Nuevo nombre: ')
             nueva_edad = int(input('Nueva edad: '))
             gestor.actualizar_usuario(nombre, nuevo_nombre, nueva_edad)
-            print('Actualizado correctamente.')
+                
         
         elif opcion == '5':
             nombre = input('Nombre del usuario a eliminar: ')
             gestor.eliminar_usuario(nombre)
-            print('Usuario elimiado.')
 
         elif opcion == '6':
             print('Saliendo...')

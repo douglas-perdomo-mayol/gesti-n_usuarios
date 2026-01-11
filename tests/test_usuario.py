@@ -30,10 +30,10 @@ class TestPolimofismo(unittest.TestCase):
 
         tipos = [u.tipo() for u in usuarios]
         self.assertEqual(tipos, ['Usuario', 'Administrador'])
-    def test_admin_es_mayor(self):
-        admin = UsuarioAdmin('Root', 10, 1)
-        self.assertEqual(admin.es_mayor_de_edad(), True)
 
+    def test_admin_es_mayor(self):
+        admin = UsuarioAdmin(1, 'Root', 18)
+        self.assertTrue(admin.es_mayor_de_edad())
 
 
 if __name__ == '__main__':
